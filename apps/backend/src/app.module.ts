@@ -1,0 +1,14 @@
+// C:\Users\vivek_laxvnt1\Desktop\projects\NestNext\apps\backend\src\app.module.ts
+import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+
+@Module({
+  imports: [
+    MongooseModule.forRoot('mongodb://127.0.0.1:27017/nestnext'),
+    AuthModule,
+    UsersModule,
+  ],
+})
+export class AppModule {}
