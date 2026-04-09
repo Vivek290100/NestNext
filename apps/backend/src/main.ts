@@ -1,4 +1,3 @@
-// C:\Users\vivek_laxvnt1\Desktop\projects\NestNext\apps\backend\src\main.ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import * as cookieParser from 'cookie-parser';

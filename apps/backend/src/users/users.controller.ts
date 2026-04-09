@@ -10,7 +10,6 @@ import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
-  // 🔒 Protected route (requires JWT)
   @UseGuards(JwtAuthGuard)
   @Get()
   findAll() {

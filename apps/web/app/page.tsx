@@ -1,4 +1,3 @@
-// apps/web/app/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -15,7 +14,6 @@ export default function Home() {
 
     if (storedUser) {
       setIsLoggedIn(true);
-      // Redirect logged-in user to dashboard
       router.push("/dashboard");
     } else {
       setIsLoggedIn(false);
@@ -24,7 +22,6 @@ export default function Home() {
     setChecking(false);
   }, [router]);
 
-  // Show nothing while checking auth (prevents flash)
   if (checking) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
@@ -33,7 +30,6 @@ export default function Home() {
     );
   }
 
-  // Only show landing page if user is NOT logged in
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Navbar */}

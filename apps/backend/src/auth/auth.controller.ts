@@ -1,4 +1,3 @@
-// C:\Users\vivek_laxvnt1\Desktop\projects\NestNext\apps\backend\src\auth\auth.controller.ts
 import { Body, Controller, Post, Res } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { Response } from 'express';
@@ -17,7 +16,7 @@ async login(@Body() body, @Res() res: Response) {
   });
 
   return res.json({
-    user: result.user, // 👈 send user
+    user: result.user,
   });
 }
 

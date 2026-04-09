@@ -1,4 +1,3 @@
-// apps/web/app/dashboard/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -12,9 +11,8 @@ export default function Dashboard() {
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
 
-    // Immediate check - no loading shown if no user
     if (!storedUser) {
-      window.location.replace("/login");   // Fast redirect, no flash
+      window.location.replace("/login");
       return;
     }
 
@@ -45,12 +43,11 @@ export default function Dashboard() {
     }
 
     localStorage.removeItem("user");
-    window.location.replace("/login");   // Replace prevents back navigation
+    window.location.replace("/login");
   };
 
-  // Show nothing (or minimal) while checking
   if (isChecking) {
-    return null;   // ← This prevents showing loading spinner after logout
+    return null; 
   }
 
   return (

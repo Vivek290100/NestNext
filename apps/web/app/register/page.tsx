@@ -1,4 +1,3 @@
-// apps/web/app/register/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -24,7 +23,7 @@ export default function Register() {
 try {
   await api.post("/auth/register", form);
   alert("Account created successfully! Please login now.");
-  window.location.href = "/login";   // Hard redirect
+  window.location.href = "/login";
     } catch (err: any) {
       setError(err.response?.data?.message || "Registration failed. Please try again.");
     } finally {
@@ -36,7 +35,6 @@ try {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-3xl shadow-xl p-10">
-          {/* Header */}
           <div className="text-center mb-10">
             <div className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
               <span className="text-white text-3xl">👤</span>
@@ -52,7 +50,6 @@ try {
               </div>
             )}
 
-            {/* Name Field */}
             <div>
               <input
                 type="text"
@@ -64,7 +61,6 @@ try {
               />
             </div>
 
-            {/* Email Field */}
             <div>
               <input
                 type="email"
@@ -76,7 +72,6 @@ try {
               />
             </div>
 
-            {/* Password Field */}
             <div>
               <input
                 type="password"
